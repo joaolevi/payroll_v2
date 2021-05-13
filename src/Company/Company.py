@@ -1,5 +1,8 @@
-class Company():
-    def __init__(self, name):
+from ..BankData import BankData
+
+class Company(BankData):
+    def __init__(self, name, bankID, agency, account):
+        super().__init__(bankID, agency, account)
         self.__name = name
 
     def get_name(self):

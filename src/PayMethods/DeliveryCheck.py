@@ -1,14 +1,9 @@
-import os, sys
-currentdir = os.path.dirname(os.path.realpath(__file__))
-parentdir = os.path.dirname(currentdir)
-sys.path.append(parentdir)
-
-from PayMethods.CheckOnHands import CheckOnHands
+from .CheckOnHands import CheckOnHands
 
 class DeliveryCheck(CheckOnHands):
     def __init__(self, value, date, bankID, companyAgency, companyAccount, check_num, adress):
         super().__init__(value, date, bankID, companyAgency, companyAccount, check_num)
-        self.adress: None
+        self.adress: adress
     
     def get_adress(self):
         return self.adress
