@@ -1,8 +1,8 @@
 class Sales:
-    def __init__(self, date, value, seller, comission):
+    def __init__(self, date, value, emp_id, comission):
         self.__date = date
         self.__value = value
-        self.__seller = seller
+        self.__seller = emp_id
         self.__comission = comission
     
     def get_date(self):

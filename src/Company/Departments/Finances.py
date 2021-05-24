@@ -1,4 +1,11 @@
-from ..Company import Company
+import os, sys
+
+currentdir = os.path.dirname(os.path.realpath(__file__))
+parentdir = os.path.dirname(currentdir)
+sys.path.append(parentdir)
+
+from RegisterTools.Sales import Sales
+from Company.Company import Company
 
 class Finances(Company):
     def __init__(self):
@@ -15,8 +22,9 @@ class Finances(Company):
     def set_paymentRegister(self, new_payList):
         self.__paymentRegister = new_payList
     
-    def setSaleToEmployee():
-        pass
+    def setSaleToEmployee(self, date, value, emp_id, comission):
+        s = Sales(date, value, emp_id, comission)
+        self.__paymentRegister.append(s)
 
     def setTaxToEmployee():
         pass
