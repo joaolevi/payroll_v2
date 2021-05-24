@@ -23,8 +23,7 @@ class EmployeesRegister():
         while x < tam:
             if self.employees_list[x].id == emp_id:
                 return x
-            else:
-                x+=1
+            x+=1
         if x < tam:
             return x
 

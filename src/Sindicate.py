@@ -1,6 +1,6 @@
 class Sindicate:
-    def __init__(self, taxPerMonth, sindMembers):
-        self.__sindMembers = sindMembers
+    def __init__(self, taxPerMonth):
+        self.__sindMembers = []
         self.__taxPerMonth = taxPerMonth
         self.__serviceTax = {'Medical':32.45,'Lawyer':45.34, 'indemnity':25.16}
     
@@ -21,10 +21,13 @@ class Sindicate:
 
     def id_generetor(self, emp):
         new_id = int(emp.rg[:-4])*17
-        emp.sind_id = new_id
+        return new_id
     
     def add_member(self, emp):
-        pass
+        new_id = self.id_generetor(emp)
+        self.__sindMembers.append({'id':new_id, 'employee':emp.name})
     
-    def remove_member(self, emp):
-        pass
+    def remove_member(self, emp_sind_id):
+        for e in self.__sindMembers:
+            if e['id'] == emp_sind_id:
+                self.__sindMembers.remove(e['id'])

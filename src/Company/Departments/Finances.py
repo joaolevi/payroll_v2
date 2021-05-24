@@ -5,7 +5,11 @@ parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
 
 from RegisterTools.Sales import Sales
-from Company.Company import Company
+from RegisterTools.EmployeesPayCheck import EmployeesPayCheck
+from RegisterTools.EmployeeBankData import EmployeeBankData
+from Company import Company
+
+REGISTER = EmployeesPayCheck()
 
 class Finances(Company):
     def __init__(self):
@@ -22,12 +26,25 @@ class Finances(Company):
     def set_paymentRegister(self, new_payList):
         self.__paymentRegister = new_payList
     
+    def add_employee(self, emp_id, value_to_receive, bankID, agency, account):
+        e = EmployeeBankData(emp_id, value_to_receive, bankID, agency, account)
+        REGISTER.add_employee_payCheck(e)
+    
     def setSaleToEmployee(self, date, value, emp_id, comission):
         s = Sales(date, value, emp_id, comission)
-        self.__paymentRegister.append(s)
+        self.__sales.append(s)
 
-    def setTaxToEmployee():
-        pass
+    def setTaxToEmployee(self, emp_id, tax_value):
+        i = REGISTER.getOnlyEmpPayCheckIndex(emp_id)
+        if i >= 0:
+            REGISTER.employees_paycheck[i].add_tax_to_discount(tax_value)
 
     def payEmployees():
         pass
+
+# F = Finances()
+# F.add_employee(23412, 1232, 123,1234,12345)
+# F.setSaleToEmployee("2021-01-05", 123.2, 23412, 12)
+# # print(F.get_sales())
+# F.setTaxToEmployee(23412, 231.42)
+# print(REGISTER.getOnlyEmpPayCheck(23412))

@@ -39,11 +39,11 @@ class HumanResourcers(Company):
             emp = REGISTER.employees_list[i]
             print("\n\nID:",emp.id,"\nTipo de Empregado:",emp.__class__.__name__, "\nNome:", emp.name,"\nRG:", emp.rg,"\nEndereco", emp.adress, "\n\n")
 
-RH = HumanResourcers()
+# RH = HumanResourcers()
 
-RH.add_employee("Comissioned", "Joao", "12312", "Rua Helena", wage=12345)
-# RH.show_employees()
-# RH.show_full_employee_details(332424)
+# RH.add_employee("Comissioned", "Joao", "12312", "Rua Helena", wage=12345)
+# # RH.show_employees()
+# # RH.show_full_employee_details(332424)
 
-# RH.change_employee_details(332424, name="Levizinho do arrcha", adress="Endereco 2")
-RH.change_employee_details(332424, emp_t="Hourly", hour_value=1251, rg=121242)
+# # RH.change_employee_details(332424, name="Levizinho do arrcha", adress="Endereco 2")
+# RH.change_employee_details(332424, emp_t="Hourly", hour_value=1251, rg=121242)

@@ -1,4 +1,4 @@
-class BankData:
+class BankData():
     def __init__(self, bankID, agency, account):
         self.bankID = bankID
         self.agency = agency
