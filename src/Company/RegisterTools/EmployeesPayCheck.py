@@ -10,6 +10,10 @@ class EmployeesPayCheck():
     def add_employee_payCheck(self, pc):
         self.employees_paycheck.append(pc)
     
+    def remove_emp(self, emp_id):
+        i = self.getOnlyEmpPayCheck(emp_id)
+        self.employees_paycheck.remove(i)
+
     def getOnlyEmpPayCheckIndex(self, emp_id):
         i = 0
         for e in self.employees_paycheck:

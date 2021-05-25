@@ -4,12 +4,11 @@ currentdir = os.path.dirname(os.path.realpath(__file__))
 parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
 
-from Company import Company
 from RegisterTools.EmployeesRegister import EmployeesRegister
 from RegisterTools.TimeRegister import TimeRegister
 
 REGISTER = EmployeesRegister()
-class HumanResourcers(Company):
+class HumanResourcers():
     def __init__(self):
         self.employeeTimeRegister = []
     
@@ -23,9 +22,9 @@ class HumanResourcers(Company):
         print(REGISTER.get_employees_list())
     
     def add_employee(self, emp_type, name, rg, adress, hour_value=None, wage=None):
-        REGISTER.add_employee(emp_type, name, rg, adress, hour_value, wage)
+        return REGISTER.add_employee(emp_type, name, rg, adress, hour_value, wage)
 
-    def remove_employee(self, emp_id):
+    def remove_employee_hr(self, emp_id):
         REGISTER.remove_employee(emp_id)
 
     def change_employee_details(self, emp_id, emp_t=None, name=None, rg=None, adress=None, hour_value=None, wage=None):

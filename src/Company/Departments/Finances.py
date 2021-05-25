@@ -7,11 +7,10 @@ sys.path.append(parentdir)
 from RegisterTools.Sales import Sales
 from RegisterTools.EmployeesPayCheck import EmployeesPayCheck
 from RegisterTools.EmployeeBankData import EmployeeBankData
-from Company import Company
 
 REGISTER = EmployeesPayCheck()
 
-class Finances(Company):
+class Finances():
     def __init__(self):
         self.__sales = []
         self.__paymentRegister = []
@@ -26,9 +25,12 @@ class Finances(Company):
     def set_paymentRegister(self, new_payList):
         self.__paymentRegister = new_payList
     
-    def add_employee(self, emp_id, value_to_receive, bankID, agency, account):
-        e = EmployeeBankData(emp_id, value_to_receive, bankID, agency, account)
+    def add_employee_finances(self, emp_id, value_to_receive, bankID, agency, account, paymentMethod):
+        e = EmployeeBankData(emp_id, value_to_receive, bankID, agency, account, paymentMethod)
         REGISTER.add_employee_payCheck(e)
+    
+    def remove_employee_fin(self, emp_id):
+        REGISTER.remove_emp(emp_id)
     
     def setSaleToEmployee(self, date, value, emp_id, comission):
         s = Sales(date, value, emp_id, comission)

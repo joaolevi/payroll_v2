@@ -36,6 +36,7 @@ class EmployeesRegister():
         else:
             emp = Salaried(name=name, rg=rg, id=new_id, adress=adress, wage=wage)
         self.employees_list.append(emp)
+        return new_id
         
     
     def remove_employee(self, emp_id):

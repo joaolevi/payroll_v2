@@ -7,7 +7,7 @@ sys.path.append(parentdir)
 from BankData import BankData
 
 class Company(BankData):
-    def __init__(self, name, bankID, agency, account):
+    def __init__(self, bankID, agency, account, name):
         super().__init__(bankID, agency, account)
         self.__name = name
 

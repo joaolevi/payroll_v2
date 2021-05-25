@@ -4,14 +4,15 @@ currentdir = os.path.dirname(os.path.realpath(__file__))
 parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
 
-from Company import BankData
+from BankData import BankData
 
 class EmployeeBankData(BankData):
-    def __init__(self, emp_id, value_to_receive, bankID, agency, account):
+    def __init__(self, emp_id, value_to_receive, bankID, agency, account, paymentMethod):
         super().__init__(bankID, agency, account)
         self.id = emp_id
         self.value_to_receive = value_to_receive
         self.tax_to_discount = 0
+        self.paymentMethod = paymentMethod
 
     def get_emp_id(self):
         return self.id
@@ -36,5 +37,3 @@ class EmployeeBankData(BankData):
         
     def __repr__(self) -> str:
         return "ID: %i, Valor a receber(s/ descontos): %.2f, Descontos: %.2f" %(self.id, self.value_to_receive, self.tax_to_discount)
-    
-
