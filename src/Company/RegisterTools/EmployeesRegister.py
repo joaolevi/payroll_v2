@@ -50,7 +50,7 @@ class EmployeesRegister():
         emp = self.employees_list[i]
         if emp_type:
             self.remove_employee(emp.id)
-            self.add_employee(emp_type=emp_type, name=emp.name, rg=emp.rg, adress=emp.adress, hour_value=None, wage=None)
+            self.add_employee(emp_type=emp_type, name=emp.name, rg=emp.rg, adress=emp.adress, hour_value=hour_value, wage=wage)
             index = self.employee_finder(emp.id)
             return index
     

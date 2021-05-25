@@ -28,7 +28,7 @@ class HumanResourcers():
         REGISTER.remove_employee(emp_id)
 
     def change_employee_details(self, emp_id, emp_t=None, name=None, rg=None, adress=None, hour_value=None, wage=None):
-        emp = REGISTER.change_employee_details(emp_id, emp_t, name, rg, adress)
+        emp = REGISTER.change_employee_details(emp_id, emp_t, name, rg, adress, hour_value, wage)
         print("\n\nAlteracao bem sucedida!")
         self.show_full_employee_details(emp_id=emp.id)
 
@@ -37,12 +37,3 @@ class HumanResourcers():
         if i:
             emp = REGISTER.employees_list[i]
             print("\n\nID:",emp.id,"\nTipo de Empregado:",emp.__class__.__name__, "\nNome:", emp.name,"\nRG:", emp.rg,"\nEndereco", emp.adress, "\n\n")
-
-# RH = HumanResourcers()
-
-# RH.add_employee("Comissioned", "Joao", "12312", "Rua Helena", wage=12345)
-# # RH.show_employees()
-# # RH.show_full_employee_details(332424)
-
-# # RH.change_employee_details(332424, name="Levizinho do arrcha", adress="Endereco 2")
-# RH.change_employee_details(332424, emp_t="Hourly", hour_value=1251, rg=121242)
