@@ -1,6 +1,8 @@
 # Projeto de Software 2020.1 part II
 ## Professor Baldoino Fonseca dos Santos
 
+## Código inicial -> src/main.py
+
 ### Code Smells
 
 1. Long Method:
