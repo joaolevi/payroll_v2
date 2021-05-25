@@ -15,9 +15,11 @@ class HumanResourcers():
     def get_employeeTimeRegister(self):
         return self.employeeTimeRegister
     def set_employeeTimeRegister(self, emp_id, date, workedHours):
-        tr = TimeRegister(emp_id, date, workedHours)
-        self.employeeTimeRegister.append(tr)
-        print(tr)
+        if REGISTER.employee_finder(emp_id):
+            tr = TimeRegister(emp_id, date, workedHours)
+            self.employeeTimeRegister.append(tr)
+            print(tr)
+        else: print("\n\nID nao encontrado ou nao existe\n\n")
 
     def show_employees(self):
         print(REGISTER.get_employees_list())
@@ -38,3 +40,4 @@ class HumanResourcers():
         if i:
             emp = REGISTER.employees_list[i]
             print("\n\nID:",emp.id,"\nTipo de Empregado:",emp.__class__.__name__, "\nNome:", emp.name,"\nRG:", emp.rg,"\nEndereco", emp.adress, "\n\n")
+        else: print("\n\nEmpregado não encontrado!!\n\n")

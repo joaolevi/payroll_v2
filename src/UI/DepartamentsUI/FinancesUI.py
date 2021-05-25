@@ -20,3 +20,9 @@ class FinancesUI():
         comission = value*comission/100
         Finances.setSaleToEmployee(date, value, emp_id, comission)
         return Finances
+
+    def set_tax_to_emp(Finances):
+        emp_id = int(input("ID do empregado: "))
+        tax_value = float(input("Valor da taxa: "))
+        Finances.setTaxToEmployee(emp_id, tax_value)
+        return Finances

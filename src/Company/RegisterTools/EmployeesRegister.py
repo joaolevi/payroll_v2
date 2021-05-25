@@ -20,6 +20,7 @@ class EmployeesRegister():
     def employee_finder(self, emp_id):
         x = -1
         tam = len(self.employees_list)
+        if tam == 0: return False
         while x < tam:
             if self.employees_list[x].id == emp_id:
                 return x

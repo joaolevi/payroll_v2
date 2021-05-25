@@ -26,4 +26,4 @@ class Sales:
         self.__comission = new_comission
     
     def __repr__(self):
-        return "%s : %s : %.2f : %.2f\n" %(self.__date, self.__seller, self.__value, self.__comission)
+        return "Data: %s ID: %s Valor: %.2f  Comissao: %.2f\n" %(self.__date, self.__seller, self.__value, self.__comission)

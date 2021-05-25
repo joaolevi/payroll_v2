@@ -23,4 +23,4 @@ class Employee:
         self.id = new_id
 
     def __repr__(self):
-        return "%s, %s" %(self.name, self.id)
+        return "Nome: %s ID: %s" %(self.name, self.id)

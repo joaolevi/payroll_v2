@@ -35,14 +35,23 @@ class Finances():
     def change_emp_fin_data(self, emp_id, bankID=None, agency=None, account=None, paymentMethod=None):
         REGISTER.change_emp_data(emp_id, bankID, agency, account, paymentMethod)
     
+    def show_emp_details(self, emp_id):
+        e = REGISTER.getOnlyEmpPayCheck(emp_id)
+        if e: print(e)
+        else: print("\n\nEmpregado nao encontrado ou nao existe\n\n")
+    
     def setSaleToEmployee(self, date, value, emp_id, comission):
-        s = Sales(date, value, emp_id, comission)
-        self.__sales.append(s)
+        if REGISTER.getOnlyEmpPayCheckIndex(emp_id):
+            s = Sales(date, value, emp_id, comission)
+            self.__sales.append(s)
+            print(s)
+        else: print("\n\nEmpregado nao encontra ou nao existe\n\n")
 
     def setTaxToEmployee(self, emp_id, tax_value):
         i = REGISTER.getOnlyEmpPayCheckIndex(emp_id)
         if i >= 0:
             REGISTER.employees_paycheck[i].add_tax_to_discount(tax_value)
+            print(REGISTER.employees_paycheck[i])
 
     def payEmployees():
         pass

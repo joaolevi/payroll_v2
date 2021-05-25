@@ -15,7 +15,7 @@ class EmployeesPayCheck():
         self.employees_paycheck.remove(i)
 
     def getOnlyEmpPayCheckIndex(self, emp_id):
-        i = 0
+        i = -1
         for e in self.employees_paycheck:
             if e.id == emp_id:
                 return i
@@ -26,6 +26,7 @@ class EmployeesPayCheck():
         for e in self.employees_paycheck:
             if e.id == emp_id:
                 return e
+        return False
 
     def change_emp_data(self, emp_id, bankID, agency, account, paymentMethod):
         i = self.getOnlyEmpPayCheckIndex(emp_id)
