@@ -15,6 +15,8 @@ class Finances():
         self.__sales = []
         self.__paymentRegister = []
 
+    # Métodos de acesso
+
     def get_sales(self):
         return self.__sales
     def set_sales(self, new_list):
@@ -24,6 +26,8 @@ class Finances():
         return self.__paymentRegister
     def set_paymentRegister(self, new_payList):
         self.__paymentRegister = new_payList
+
+      # Funções específicas
     
     def add_employee_finances(self, emp_id, value_to_receive, bankID, agency, account, paymentMethod):
         e = EmployeeBankData(emp_id, value_to_receive, bankID, agency, account, paymentMethod)

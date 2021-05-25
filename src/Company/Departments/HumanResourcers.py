@@ -11,6 +11,8 @@ REGISTER = EmployeesRegister()
 class HumanResourcers():
     def __init__(self):
         self.employeeTimeRegister = []
+
+    # Métodos de acesso
     
     def get_employeeTimeRegister(self):
         return self.employeeTimeRegister
@@ -20,6 +22,8 @@ class HumanResourcers():
             self.employeeTimeRegister.append(tr)
             print(tr)
         else: print("\n\nID nao encontrado ou nao existe\n\n")
+    
+    # Funções específicas
 
     def show_employees(self):
         print(REGISTER.get_employees_list())

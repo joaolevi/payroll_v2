@@ -3,6 +3,8 @@ class Administration():
         self.__paySchedules = ["weekly-1-friday", "weekly-2-friday", "mounth-$"]
         self.__employeesPayDate = []
 
+    # Métodos de acesso
+
     def get_paySchedules(self):
         return self.__paySchedules
     def set_paySchedules(self, new_paySchedules):
@@ -11,6 +13,8 @@ class Administration():
 
     def get_employeesPayDate(self):
         return self.__employeesPayDate
+
+    # Funções específicas
 
     def add_employeePayDate(self, emp_id, emp_type):
         if emp_type == "Hourly":
