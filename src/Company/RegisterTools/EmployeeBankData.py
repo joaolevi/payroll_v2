@@ -36,4 +36,4 @@ class EmployeeBankData(BankData):
         emp.tax_to_discount = 0
         
     def __repr__(self) -> str:
-        return "ID: %i, Valor a receber(s/ descontos): %.2f, Descontos: %.2f" %(self.id, self.value_to_receive, self.tax_to_discount)
+        return "ID: %i, Metodo de pagamento: %s, Valor a receber(s/ descontos): %.2f, Descontos: %.2f" %(self.id, self.paymentMethod , self.value_to_receive, self.tax_to_discount)

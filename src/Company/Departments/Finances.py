@@ -32,6 +32,9 @@ class Finances():
     def remove_employee_fin(self, emp_id):
         REGISTER.remove_emp(emp_id)
     
+    def change_emp_fin_data(self, emp_id, bankID=None, agency=None, account=None, paymentMethod=None):
+        REGISTER.change_emp_data(emp_id, bankID, agency, account, paymentMethod)
+    
     def setSaleToEmployee(self, date, value, emp_id, comission):
         s = Sales(date, value, emp_id, comission)
         self.__sales.append(s)

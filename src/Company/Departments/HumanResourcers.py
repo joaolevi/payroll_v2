@@ -17,6 +17,7 @@ class HumanResourcers():
     def set_employeeTimeRegister(self, emp_id, date, workedHours):
         tr = TimeRegister(emp_id, date, workedHours)
         self.employeeTimeRegister.append(tr)
+        print(tr)
 
     def show_employees(self):
         print(REGISTER.get_employees_list())

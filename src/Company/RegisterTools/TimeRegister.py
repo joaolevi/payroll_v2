@@ -26,4 +26,4 @@ class TimeRegister:
         self.employeesTimeRegisters = []
     
     def __repr__(self):
-        return "%s -- %s\n" %(self.__date, self.__hours)
+        return "\nid: %i, data: %s -- %s horas\n\n" %(self.emp_id, self.date, self.hours)

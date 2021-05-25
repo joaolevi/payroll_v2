@@ -27,3 +27,16 @@ class EmployeesPayCheck():
             if e.id == emp_id:
                 return e
 
+    def change_emp_data(self, emp_id, bankID, agency, account, paymentMethod):
+        i = self.getOnlyEmpPayCheckIndex(emp_id)
+        if bankID:
+            self.employees_paycheck[i].bankID = bankID
+        if agency:
+            self.employees_paycheck[i].agency = agency
+        if account:
+            self.employees_paycheck[i].account = account
+        if paymentMethod:
+            self.employees_paycheck[i].paymentMethod = paymentMethod
+        return self.employees_paycheck[i]
+
+
