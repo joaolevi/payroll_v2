@@ -40,7 +40,7 @@
 	Methods or classes that ought not to be visible to clients are
 	publicly visible to them
 	
-## Code Smalls
+## Code Smells
 #### 1. Bad Smell: Large Class
 No projeto não-refatorado foi criada uma classe [Company][1] que contemplava todas as possíveis funções solicitadas no projeto, desde a função 1 a 9. Dessa forma, a classe assumiu um tamanho muito extenso que fugia dos padrões de código, tanto na quantidade de atributos quanto na quantidade de métodos.
 
