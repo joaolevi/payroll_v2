@@ -60,7 +60,7 @@ A classe [[11]][Employee] Employee no novo código passou a ter apenas 4 atribut
 Na classe Company do primeiro código, existiam funções como pay_employees e payday_employee_method que cumpriam seu papel porém, para elaborar um resultado ela precisava fazer várias verificações de condições pois não existiam funções que faziam isso por ela.
 
 ##### 2.2 Solution:
-A solução para diminuir a quantidade de atribuições de uma função, foi a criação de uma pasta de classes "Ferramentas de Registro" onde cada classe da pasta DEPARTAMENTS teria uma classe que conteplasse funções de suporte, ou seja, que teriam o uso repetitivo nas demais funções. Assim como, também, como o próprio nome já diz, ter o registro dos dados concernente de cada departamento da compania.
+A solução para diminuir a quantidade de atribuições de uma função, foi a criação de uma pasta de classes "Ferramentas de Registro" onde cada classe da pasta DEPARTAMENTS teria uma classe que conteplasse funções de suporte, ou seja, que teriam o uso repetitivo nas demais funções. Assim também, como o próprio nome já diz, ter o registro dos dados concernentes de cada departamento da compania.
 
 O caminho, por tanto, ficou:
 -- Company/[RegisterTools][6]/"classes"
